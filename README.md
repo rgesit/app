@@ -21,7 +21,7 @@ Then open your browser http://localhost:8181
 
 ### Controller
 
-Since version 1, Panada use [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller) design patern. As part of the HMVC architecture, controllers are responsible for processing requests and generating responses, both in main application controller's and module controller's. Now lets create one in main application.
+Since version 1, Panada use [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller) design pattern. As part of the HMVC architecture, controllers are responsible for processing requests and generating responses, both in main application controller's and module controller's. Now lets create one in main application.
 
 Create a new file named Hello.php in src/Controller folder. Then write some class:
 
@@ -647,7 +647,7 @@ Panada folder now moved to vendor/panada.
 
 #### Views
 
-In version 1.1 to display the output diveloper simply just echo the variable just like this:
+In version 1.1 to display the output developer simply just echo the variable just like this:
 
 ```php
 public function index($id = 0)
@@ -655,7 +655,7 @@ public function index($id = 0)
     echo 'This is the news with ID' . $id;
 }
 ```
-Or, use $this->output() metod to display from view file:
+Or, use $this->output() method to display from view file:
 
 ```php
 public function index()
@@ -730,13 +730,13 @@ We embraces the feature of [trait](http://php.net/manual/en/language.oop5.traits
 
 Controller features are removed and only method alias are supported. To accommodate your alias like features, you can use Route.
 
-If you need to use other name for alias method, you can changed it at ```app/scr/config/main.php```.
+If you need to use other name for alias method, you can changed it at ```app/src/config/main.php```.
 
 #### Database
 
-Since version 2.0, Panada use PDO as the default db driver. We also remove [Active Recored](http://panadaframework.com/documentation/id/classes/database/activerecord.html) feature and replaced with [NotORM](http://www.notorm.com/). consequently, there are now way to use your current query in version 2.0. You must update all your db query.
+Since version 2.0, Panada use PDO as the default db driver. We also remove [Active Record](http://panadaframework.com/documentation/id/classes/database/activerecord.html) feature and replaced with [NotORM](http://www.notorm.com/). consequently, there are now way to use your current query in version 2.0. You must update all your db query.
 
-However, we still maintain [Query Builder](http://panadaframework.com/documentation/id/classes/database/query_builder.html). But you need to update your file db configuration located at ```app/src/config/database.php```.
+However, we still maintain [Query Builder](http://panadaframework.com/documentation/id/classes/database/query_builder.html). But you need to update your file db configuration located at  ```app/src/config/database.php```.
 
 Panada version 1 db config looks like:
 
